@@ -66,7 +66,7 @@ body {
   width: 100%;
   height: auto;
   grid-template-columns: 15% 1fr 27%;
-  grid-template-rows: 60px 150px 270px auto;
+  grid-template-rows: 70px 150px 270px auto;
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-areas: "sidebar search search" "sidebar header header" "sidebar reports reports" "sidebar main marketing";
@@ -136,7 +136,60 @@ hr {
   min-width: 20px;
 }
 
-/*15 auto 27% %*/
+.search-bar {
+  display: grid;
+  grid-template-columns: 70px 1fr 70px 70px 70px;
+}
+
+.search-bar section:hover {
+  background-color: #18a4f9;
+}
+
+.search-bar section:hover .svg-inline--fa {
+  color: #fff;
+}
+
+.search-bar .menu {
+  border-right: transparent;
+}
+
+.search-bar section {
+  justify-content: center;
+  align-items: center;
+  /*border-right-width: 2px;*/
+  /*border-right-style: solid;*/
+  /*border-right-color: #ccc;*/
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #ccc;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+}
+
+.search-bar input {
+  border-top: transparent;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.search-bar .svg-inline--fa {
+  width: 22px;
+  height: 22px;
+  color: #526074;
+}
+
+.employee-data {
+  padding: 2rem;
+}
+
+.employee-data h2 {
+  margin: 0;
+}
+
+.employee-data p {
+  margin: 0;
+}
 
 /*navy blue - #354052
 job description backgroud - # 707f94
