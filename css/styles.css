@@ -2,12 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -61,6 +55,13 @@ textarea {
    Camilo's custom styles
    ========================================================================== */
 
+html {
+  color: #868f9d;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   display: grid;
   width: 100%;
@@ -110,8 +111,19 @@ hr {
   padding-left: 40px;
 }
 
+.main-navigation ul {
+  padding-left: 0;
+}
+
 .main-navigation li {
   list-style: none;
+  line-height: 2rem;
+  padding-left: 40px;
+}
+
+.main-navigation li:hover {
+  border-left: 4px solid #18a4f9;
+  padding-left: 36px;
 }
 
 .marketing,
@@ -156,21 +168,26 @@ hr {
 .search-bar section {
   justify-content: center;
   align-items: center;
-  /*border-right-width: 2px;*/
-  /*border-right-style: solid;*/
-  /*border-right-color: #ccc;*/
-  border-left-width: 2px;
-  border-left-style: solid;
-  border-left-color: #ccc;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #ccc;
-}
-
-.search-bar input {
-  border-top: transparent;
   border-left: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
+}
+
+.search-bar section.search-input {
+  justify-content: flex-start;
+}
+
+.search-bar section.search-input:hover {
+  background-color: transparent;
+  color: #526074;
+}
+
+.search-input svg {
+  margin: 0 1rem 0 40px;
+}
+
+.search-input input {
+  border: none;
+  width: 100%;
 }
 
 .search-bar .svg-inline--fa {
@@ -179,28 +196,78 @@ hr {
   color: #526074;
 }
 
+.search-bar .fa-caret-left {
+  width: 6px;
+  margin-right: 2px;
+  color: #18a4f9;
+}
+
 .employee-data {
   padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .employee-data h2 {
-  margin: 0;
+  margin: 0 0 5px 0;
+  color: #222;
 }
 
 .employee-data p {
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
-/*navy blue - #354052
-job description backgroud - # 707f94
-light blue grey - #edf2f6
-navigation hover - #18a4f9
+.employee-data a {
+  color: #18a4f9;
+  text-decoration: none;
+}
 
-fb - #4e73c3
-twitter - #01aaef
-linkedin - #0482bd
-light-green - #4bb7c1
- */
+.employee-buttons {
+  align-items: center;
+}
+
+.employee-buttons button {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.employee-buttons button:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.employee-buttons button.employee-button1 {
+  border-radius: 28px;
+  padding: 15px 20px;
+}
+
+.employee-buttons button.employee-button2 .svg-inline--fa,
+.employee-buttons button.employee-button3 .svg-inline--fa,
+.employee-buttons button.employee-button4 .svg-inline--fa {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 15px;
+}
+
+.employee-buttons .employee-button1 svg {
+  width: 16px;
+  color: #8ac631;
+}
+
+.section-seperator span {
+  width: 48%;
+  border-top: 1px solid #ccc;
+  display: inline-block;
+}
+
+/*fb - #4e73c3*/
+/*twitter - #01aaef*/
+/*linkedin - #0482bd*/
+/*light-green - #4bb7c1*/
 
 /* ==========================================================================
    Media Queries
