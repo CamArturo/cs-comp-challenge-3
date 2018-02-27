@@ -6,7 +6,7 @@
   <title>Camilo Comp Challenge 3</title>
   <meta name="description" content="Comp Challenge 3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -16,7 +16,7 @@
   <![endif]-->
 </head>
 <body class="container">
-<nav class="main-navigation sidebar" role="navigation">
+<nav class="main-navigation sidebar" role="navigation" aria-label="Main Navigation">
   <section class="employee">
     <img src="img/Newton_Barley.jpg" alt="Employee Newton Barley">
     <select>
@@ -55,12 +55,14 @@
 </nav>
 <section class="search-bar" role="search">
   <section class="menu d-flex"><i class="fas fa-caret-left"></i><i class="fas fa-bars"></i></section>
-  <section class="search-input d-flex"><i class="fas fa-search"></i><input type="search" placeholder="Search for a job, task or resume"></section>
+  <section class="search-input d-flex"><i class="fas fa-search"></i><input type="search"
+                                                                           placeholder="Search for a job, task or resume">
+  </section>
   <section class="menu d-flex"><i class="fas fa-user"></i></section>
   <section class="menu d-flex"><i class="fas fa-calendar-plus"></i></section>
   <section class="menu d-flex"><i class="fas fa-calendar-alt"></i></section>
 </section>
-<section class="employee-navigation" role="navigation">
+<section class="employee-container" role="banner">
   <section class="employee-data d-flex">
     <div class="employee-data-info">
       <h2>Customer Service Representative</h2>
@@ -75,65 +77,81 @@
       <button type="button" class="employee-button4"><i class="fas fa-trash-alt"></i></button>
     </div>
   </section>
-  <nav>
+  <a href="#menu" class="menu-link">Menu</a>
+  <nav class="employee-navigation" id="menu" role="navigation" aria-label="Employee Navigation">
     <ul>
-      <li>Summary</li>
-      <li>Applicants</li>
-      <li>Job Board</li>
-      <li>Interviews</li>
-      <li>Activity</li>
-      <li>Broadcast</li>
-      <li>Notifications</li>
+      <li><a href="#" class="hover-left">Summary</a></li>
+      <li><a href="#" class="hover-left">Applicants</a></li>
+      <li><a href="#" class="hover-left">Job Board</a></li>
+      <li><a href="#" class="hover-left">Interviews</a></li>
+      <li><a href="#" class="hover-left">Activity</a></li>
+      <li><a href="#" class="hover-left">Broadcast</a></li>
+      <li><a href="#" class="hover-left">Notifications</a></li>
     </ul>
   </nav>
+  </div>
 </section>
-<section class="employee-info">
-  <button type="button">Totals - Out of 5,231 views</button>
-  <button type="button">Applicants/Day</button>
-  <div class="section-seperator"><span class="hr"></span><i class="fas fa-angle-up"></i><span class="hr"></span></div>
+<section class="employee-info" role="complementary">
+  <div class="donut-chart-container">
+
+  </div>
+  <div class="bar-chart">
+
+  </div>
+  <div class="totals">
+    <button type="button">Totals - Out of 5,231 views</button>
+  </div>
+  <div class="applicants">
+    <button type="button">Applicants/Day</button>
+  </div>
+  <div class="section-separator d-flex"><span class="hr"></span><i class="fas fa-angle-up"></i><span class="hr"></span></div>
 </section>
 <main class="main" role="main">
   <table>
+    <thead>
     <tr>
-      <th>Job Description
-        <button type="button">Edit</button>
+      <th scope="col">Job Description</th>
+      <th scope="col">
+        <button type="button"><i class="fas fa-pencil-alt"></i>&nbsp;Edit</button>
       </th>
     </tr>
+    </thead>
     <tr>
-      <td>Position title</td>
+      <th scope="row">Position title</th>
       <td>Customer Service Representative</td>
     </tr>
     <tr>
-      <td>Location</td>
+      <th scope="row">Location</th>
       <td>San Francisco, CA</td>
     </tr>
     <tr>
-      <td>Employment Type</td>
+      <th scope="row">Employment Type</th>
       <td>Full-time</td>
     </tr>
     <tr>
-      <td>Experience</td>
+      <th scope="row">Experience</th>
       <td>Mid-Level</td>
     </tr>
     <tr>
-      <td>Status</td>
+      <th scope="row">Status</th>
       <td>Open</td>
     </tr>
     <tr>
-      <td>Description</td>
+      <th scope="row">Description</th>
       <td>The Customer Service Representative is responsible for interacting with and providing quality assistance to
           all radical customers, responsible for keeping up-to-date on the various product shizzle; heloing the bidness
           reduce customer service wait times while doing a backhand spring and eating ham sandwich.
       </td>
     </tr>
     <tr>
-      <td>Hiring Lead</td>
+      <th scope="row">Hiring Lead</th>
       <td>Tom Tizzy</td>
     </tr>
     <tr>
-      <td>Approved Salary</td>
+      <th scope="row" class="last">Approved Salary</th>
       <td>$58,000</td>
     </tr>
+    <tbody>
   </table>
 </main>
 <aside class="marketing" role="complementary">
