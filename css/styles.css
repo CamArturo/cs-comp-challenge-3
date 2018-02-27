@@ -381,10 +381,6 @@ nav.employee-navigation li a {
   grid-area: applicants;
 }
 
-/*.section-separator {*/
-  /*grid-area: separator;*/
-/*}*/
-
 .employee-info button {
   background-color: #fff;
   border: 2px solid #ccc;
@@ -430,6 +426,28 @@ nav.employee-navigation li a {
   border-bottom-right-radius: 5px;
 }
 
+.main th,
+.main td {
+  border-bottom: 1px solid #ccc;
+
+}
+
+/*.main th {*/
+  /*margin: auto;*/
+  /*border-bottom: none;*/
+  /*background: linear-gradient(#ccc,#ccc) bottom no-repeat;*/
+  /*background-size: auto auto;*/
+  /*background-size: calc(100% - 2rem) 1px;*/
+/*}*/
+
+/*.main td {*/
+  /*margin: auto;*/
+  /*border-bottom: none;*/
+  /*background: linear-gradient(#ccc,#ccc) bottom no-repeat;*/
+  /*background-size: auto auto;*/
+  /*background-size: calc(100% - 2rem) 1px;*/
+/*}*/
+
 .main thead th {
   background-color: #6f7d95;
   color: #fff;
@@ -439,8 +457,13 @@ nav.employee-navigation li a {
   height: 55px;
   text-align: left;
   padding-left: 2rem;
+  margin: 10px;
   text-transform: uppercase;
   font-family: 'Arial', sans-serif;
+}
+
+.main table tr {
+  height: 90px;
 }
 
 .main table th:nth-child(1) {
@@ -460,7 +483,7 @@ nav.employee-navigation li a {
 }
 
 .main table td {
-  padding-left: 2rem;
+  padding: 1rem 1rem 1rem 2rem;
 }
 
 /*fb - #4e73c3*/
