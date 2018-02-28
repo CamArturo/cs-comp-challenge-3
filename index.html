@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!--[if lt IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
@@ -54,14 +55,14 @@
   </ul>
 </nav>
 <section class="search-bar" role="search">
-  <section class="menu d-flex"><i aria-hidden="true" class="fas fa-caret-left"></i><i aria-hidden="true"
+  <section class="search-bar-menu d-flex"><i aria-hidden="true" class="fas fa-caret-left"></i><i aria-hidden="true"
                                                                                       class="fas fa-bars"></i></section>
   <section class="search-input d-flex"><i aria-hidden="true" class="fas fa-search"></i><input type="search"
                                                                                               placeholder="Search for a job, task or resume">
   </section>
-  <section class="menu d-flex"><i aria-hidden="true" class="fas fa-user"></i></section>
-  <section class="menu d-flex"><i aria-hidden="true" class="fas fa-calendar-plus"></i></section>
-  <section class="menu d-flex"><i aria-hidden="true" class="fas fa-calendar-alt"></i></section>
+  <section class=" d-flex"><i aria-hidden="true" class="fas fa-user"></i></section>
+  <section class=" d-flex"><i aria-hidden="true" class="fas fa-calendar-plus"></i></section>
+  <section class=" d-flex"><i aria-hidden="true" class="fas fa-calendar-alt"></i></section>
 </section>
 <section class="employee-container" role="banner">
   <section class="employee-data d-flex">
@@ -73,7 +74,7 @@
           href="index.html">preview this post</a></p>
     </div>
     <div class="employee-buttons d-flex">
-      <button type="button" class="employee-button1"><i aria-hidden="true" class="fas fa-circle"></i>&nbsp;&nbsp;<span>Open</span>
+      <button type="button" class="employee-button1"><i aria-hidden="true" class="fas fa-circle"></i><span>Open</span>
       </button>
       <button type="button" class="employee-button2"><i aria-hidden="true" class="fas fa-bookmark"></i></button>
       <button type="button" class="employee-button3"><i aria-hidden="true" class="fas fa-pencil-alt"></i></button>
@@ -155,7 +156,7 @@
     <thead>
     <tr>
       <th scope="col" class="border-left"></th>
-      <th scope="col">Job Description</th>
+      <th scope="col" class="job-description">Job Description</th>
       <th scope="col">
         <button type="button" class="edit-button"><i aria-hidden="true" class="fas fa-pencil-alt"></i>&nbsp;Edit
         </button>
@@ -221,9 +222,9 @@
 </main>
 <aside class="marketing" role="complementary">
   <article class="social-container">
-    <button class="marketing__facebook"><i class="fab fa-facebook-f"></i>Post to Facebook</button>
-    <button class="marketing__twitter"><i class="fab fa-twitter"></i>Tweet this Job</button>
-    <button class="marketing__linkedin"><i class="fab fa-linkedin-in"></i>Post to Linkedin</button>
+    <button class="marketing__facebook"><i class="fab fa-facebook-f"></i><span>Post to Facebook</span></button>
+    <button class="marketing__twitter"><i class="fab fa-twitter"></i><span>Tweet this Job</span></button>
+    <button class="marketing__linkedin"><i class="fab fa-linkedin-in"></i><span>Post to Linkedin</span></button>
   </article>
   <article class="marketing-container">
     <section class="marketing-item link-job">
