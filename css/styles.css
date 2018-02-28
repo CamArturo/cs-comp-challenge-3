@@ -135,6 +135,11 @@ hr {
   padding-left: 40px;
 }
 
+.main-navigation li a {
+  color: #868f9d;
+  text-decoration: none;
+}
+
 .main-navigation__main li:hover,
 .main-navigation__admin li:hover {
   border-left: 4px solid #18a4f9;

@@ -17,10 +17,10 @@
   <![endif]-->
 </head>
 <body class="container">
-<nav class="main-navigation sidebar" role="navigation" aria-label="Main Navigation">
+<nav class="main-navigation sidebar" id="main-navigation" role="navigation" aria-label="Employee Image">
   <section class="employee">
     <img src="img/Newton_Barley.jpg" alt="Employee Newton Barley">
-    <select>
+    <select aria-label="List of Employee Images">
       <option value="Newton Barley">Newton Barley</option>
       <option value="Pamela Lovett">Pamela Lovett</option>
       <option value="Gavin Love">Gavin Love</option>
@@ -29,33 +29,33 @@
   </section>
   <hr>
   <h3>Main</h3>
-  <ul class="main-navigation__main">
-    <li><i aria-hidden="true" class="fas fa-home"></i>&nbsp;&nbsp;Main</li>
-    <li><i aria-hidden="true" class="fas fa-suitcase"></i>&nbsp;&nbsp;Jobs</li>
-    <li><i aria-hidden="true" class="fas fa-inbox"></i>&nbsp;&nbsp;Resumes</li>
-    <li><i aria-hidden="true" class="fas fa-calendar-check"></i>&nbsp;&nbsp;Tasks</li>
-    <li><i aria-hidden="true" class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Calendar</li>
+  <ul class="main-navigation__main" aria-label="main navigation">
+    <li><a href="#"><i aria-hidden="true" class="fas fa-home"></i>&nbsp;&nbsp;Main</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-suitcase"></i>&nbsp;&nbsp;Jobs</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-inbox"></i>&nbsp;&nbsp;Resumes</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-calendar-check"></i>&nbsp;&nbsp;Tasks</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Calendar</a></li>
   </ul>
   <hr>
   <h3>Admin</h3>
-  <ul class="main-navigation__admin">
-    <li><i aria-hidden="true" class="fas fa-users"></i>&nbsp;&nbsp;Users</li>
-    <li><i aria-hidden="true" class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Locations</li>
-    <li><i aria-hidden="true" class="fas fa-sitemap"></i>&nbsp;&nbsp;Workflows</li>
-    <li><i class="far fa-clipboard"></i>&nbsp;&nbsp;Jobs Boards</li>
-    <li><i aria-hidden="true" class="fas fa-share-alt"></i>&nbsp;&nbsp;Social</li>
+  <ul class="main-navigation__admin" aria-label="admin navigation">
+    <li><a href="#"><i aria-hidden="true" class="fas fa-users"></i>&nbsp;&nbsp;Users</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Locations</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-sitemap"></i>&nbsp;&nbsp;Workflows</a></li>
+    <li><a href="#"><i class="far fa-clipboard"></i>&nbsp;&nbsp;Jobs Boards</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-share-alt"></i>&nbsp;&nbsp;Social</a></li>
   </ul>
   <hr>
   <h3>Categories</h3>
   <ul>
-    <li><i aria-hidden="true" class="fas fa-check-square" style="color: yellow;"></i>&nbsp;Administrative</li>
-    <li><i aria-hidden="true" class="fas fa-square" style="color: #2baafa;"></i>&nbsp;Design</li>
-    <li><i aria-hidden="true" class="fas fa-square" style="color: #e91a61;"></i>&nbsp;Exective</li>
-    <li><i aria-hidden="true" class="fas fa-square" style="color: #02aa89"></i>&nbsp;Human Resources</li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-check-square" style="color: yellow;"></i>&nbsp;Administrative</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-square" style="color: #2baafa;"></i>&nbsp;Design</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-square" style="color: #e91a61;"></i>&nbsp;Exective</a></li>
+    <li><a href="#"><i aria-hidden="true" class="fas fa-square" style="color: #02aa89"></i>&nbsp;Human Resources</a></li>
   </ul>
 </nav>
 <section class="search-bar" role="search">
-  <section class="search-bar-menu d-flex"><i aria-hidden="true" class="fas fa-caret-left"></i><i aria-hidden="true"
+  <section class="search-bar-menu d-flex" aria-expanded="true" aria-controls="main-navigation"><i aria-hidden="true" class="fas fa-caret-left"></i><i aria-hidden="true"
                                                                                       class="fas fa-bars"></i></section>
   <section class="search-input d-flex"><i aria-hidden="true" class="fas fa-search"></i><input type="search"
                                                                                               placeholder="Search for a job, task or resume">
@@ -74,23 +74,23 @@
           href="index.html">preview this post</a></p>
     </div>
     <div class="employee-buttons d-flex">
-      <button type="button" class="employee-button1"><i aria-hidden="true" class="fas fa-circle"></i><span>Open</span>
+      <button type="button" class="employee-button1" aria-label="Open"><i aria-hidden="true" class="fas fa-circle"></i><span>Open</span>
       </button>
-      <button type="button" class="employee-button2"><i aria-hidden="true" class="fas fa-bookmark"></i></button>
-      <button type="button" class="employee-button3"><i aria-hidden="true" class="fas fa-pencil-alt"></i></button>
-      <button type="button" class="employee-button4"><i aria-hidden="true" class="fas fa-trash-alt"></i></button>
+      <button type="button" class="employee-button2" aria-label="Bookmark"><i aria-hidden="true" class="fas fa-bookmark"></i></button>
+      <button type="button" class="employee-button3" aria-label="Edit Employee Info"><i aria-hidden="true" class="fas fa-pencil-alt"></i></button>
+      <button type="button" class="employee-button4" aria-label="Delete Employee Info"><i aria-hidden="true" class="fas fa-trash-alt"></i></button>
     </div>
   </section>
-  <a href="#menu" class="menu-link">Menu</a>
+  <a href="#menu" role="menuitem" class="menu-link">Menu</a>
   <nav class="employee-navigation" id="menu" role="navigation" aria-label="Employee Navigation">
     <ul>
-      <li><a href="#" class="hover-left">Summary</a></li>
-      <li><a href="#" class="hover-left">Applicants</a></li>
-      <li><a href="#" class="hover-left">Job Board</a></li>
-      <li><a href="#" class="hover-left">Interviews</a></li>
-      <li><a href="#" class="hover-left">Activity</a></li>
-      <li><a href="#" class="hover-left">Broadcast</a></li>
-      <li><a href="#" class="hover-left">Notifications</a></li>
+      <li><a href="#" title="Summar" class="hover-left">Summary</a></li>
+      <li><a href="#" title="Applicants" class="hover-left">Applicants</a></li>
+      <li><a href="#" title="Job Board" class="hover-left">Job Board</a></li>
+      <li><a href="#" title="Interviews" class="hover-left">Interviews</a></li>
+      <li><a href="#" title="Acitivity" class="hover-left">Activity</a></li>
+      <li><a href="#" title="Broadcast" class="hover-left">Broadcast</a></li>
+      <li><a href="#" title="Notifications" class="hover-left">Notifications</a></li>
     </ul>
   </nav>
   </div>
@@ -213,7 +213,7 @@
     </tr>
     <tr>
       <th scope="row" class="border-left"></th>
-      <th scope="row" class="last" style="border-bottom: none;">Approved Salary</th>
+      <th scope="row" class="last" style="border-bottom: none; font-weight: bold">Approved Salary</th>
       <td style="border-bottom: none;">$58,000</td>
       <th class="border-right"></th>
     </tr>
