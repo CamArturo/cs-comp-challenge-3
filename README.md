@@ -22,3 +22,11 @@ In this project I used scalable svg fonts, CSS grid and Flexbox. There is very l
 
 ![screenshot-2018-2-28 camilo comp challenge 3 2](https://user-images.githubusercontent.com/8752377/36811036-b96023a6-1c89-11e8-8cf5-0b30d0a171d5.png)
 
+### Ipad 
+#### 1024 x 768
+
+![screenshot-2018-2-28 camilo comp challenge 3 5](https://user-images.githubusercontent.com/8752377/36812102-432f3e0c-1c8d-11e8-8151-b78a76e5ad58.png)
+
+### Iphone6 
+#### 375 x 667
+
