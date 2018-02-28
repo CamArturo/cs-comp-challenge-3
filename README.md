@@ -17,4 +17,5 @@ In this project I used scalable svg fonts, CSS grid and Flexbox. There is very l
 ![static-comp-challenge-3](https://user-images.githubusercontent.com/8752377/36808511-84597ede-1c82-11e8-875b-75a1694d5676.jpg)
 
 ### My final Comp is below
+![screenshot-2018-2-28 camilo comp challenge 3 2](https://user-images.githubusercontent.com/8752377/36811036-b96023a6-1c89-11e8-8cf5-0b30d0a171d5.png)
 
