@@ -51,9 +51,7 @@ textarea {
   display: flex;
 }
 
-/* ==========================================================================
-   Camilo's custom styles
-   ========================================================================== */
+/*==========  General Element Styles  ==========*/
 
 [class^="hover-"] {
   cursor: pointer;
@@ -80,7 +78,7 @@ body {
   width: 100%;
   height: auto;
   grid-template-columns: 15% 1fr 27%;
-  grid-template-rows: 70px 150px 360px auto;
+  grid-template-rows: 70px 150px auto auto;
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-areas: "sidebar search search" "sidebar header header" "sidebar reports reports" "sidebar main marketing";
@@ -107,17 +105,22 @@ body {
   grid-area: marketing;
 }
 
-/* ==========================================================================
-   custom styles
-   ========================================================================== */
-
 hr {
   border-top: 1px solid #2c3749;
   border-bottom: 1px solid #3b4961;
 }
 
+/*==========  Main Navigation  ==========*/
+
 .main-navigation {
   background-color: #354052;
+}
+
+.main-navigation select {
+  background-color: #354052;
+  color: #a0abbd;
+  border: none;
+  overflow: auto;
 }
 
 .main-navigation h3 {
@@ -134,7 +137,8 @@ hr {
   padding-left: 40px;
 }
 
-.main-navigation li:hover {
+.main-navigation__main li:hover,
+.main-navigation__admin li:hover {
   border-left: 4px solid #18a4f9;
   padding-left: 36px;
 }
@@ -277,6 +281,30 @@ hr {
   color: #8ac631;
 }
 
+.donut-1,
+.donut-2,
+.donut-3 {
+  position: relative;
+}
+
+.donut-interior {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.donut-interior p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 34px;
+}
+
+.donut-interior p {
+  text-transform: uppercase;
+}
+
 a.menu-link {
   float: right;
   display: block;
@@ -355,13 +383,14 @@ nav.employee-navigation li a {
   width: 100%;
   height: auto;
   grid-template-columns: 55% 45%;
-  grid-template-rows: 70% 20% 10%;
+  grid-template-rows: 60% 20% 20%;
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-areas:
       "donut bar"
       "totals applicants"
       "seperator seperator";
+  padding-top: 3rem;
 }
 
 .employee-info button {
@@ -380,6 +409,8 @@ nav.employee-navigation li a {
 .employee-info img {
   margin: 0 auto;
   display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .employee-info .totals,
@@ -390,6 +421,7 @@ nav.employee-navigation li a {
 
 .donut-chart-container {
   grid-area: donut;
+  margin-left: 2rem;
 }
 
 .bar-chart {
@@ -408,7 +440,7 @@ nav.employee-navigation li a {
   align-items: center;
   justify-content: space-between;
   grid-column: 1 / span 2;
-  margin-bottom: 1rem;
+  padding: 2rem 0;
 }
 
 .section-separator .hr {
@@ -435,21 +467,16 @@ nav.employee-navigation li a {
 
 .main table {
   background-color: #fff;
-  margin: 0 2rem;
+  margin: 1rem 4rem;
   height: auto;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-/*.main th,*/
-/*.main td {*/
-  /*border-bottom: 1px solid #ccc;*/
-/*}*/
-
-/*.main .border-bottom {*/
-  /*width: calc(100% - 2rem);*/
-  /*border-bottom: 1px solid #ccc;;*/
-/*}*/
+.main .edit-button:hover {
+  color: #6f7d95;
+  background-color: #fff;
+}
 
 .main thead th {
   background-color: #6f7d95;
@@ -472,7 +499,7 @@ nav.employee-navigation li a {
   width: 2rem;
 }
 .main table th:nth-child(2) {
-  width: calc(25% - 2rem);
+  width: 25%;
   border-bottom: 1px solid #ccc;
   margin: 10px;
 }
@@ -493,17 +520,79 @@ nav.employee-navigation li a {
   background-color: #7c8ca6;
   border: none;
   padding: 8px;
-  margin-left: 1rem;
 }
 
 .main table td {
-  padding: 1rem 1rem 1rem 2rem;
+  padding: 1rem 1rem 1rem 0;
 }
 
-/*fb - #4e73c3*/
-/*twitter - #01aaef*/
-/*linkedin - #0482bd*/
-/*light-green - #4bb7c1*/
+/*==========  Marketing  ==========*/
+
+.social-container {
+  color: #fff;
+  margin: 1rem 3rem 0 auto;
+}
+
+.social-container .svg-inline--fa {
+  margin: 0 1rem 0 .5rem;
+  float: left;
+}
+
+.social-container button {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.social-container .marketing__facebook {
+  margin: 0 0 1rem 0;
+}
+
+.social-container .marketing__twitter,
+.social-container .marketing__linkedin {
+  margin: 1rem 0;
+}
+
+.marketing__facebook {
+  background-color: #4e73c3;
+}
+
+.marketing__twitter {
+  background-color: #01aaef;
+}
+
+.marketing__linkedin {
+  background-color: #0482bd;
+}
+
+.marketing-container h4 .svg-inline--fa{
+  margin-right: 1rem;
+}
+
+.marketing__input input.email {
+  width: 57%;
+  border-radius: 5px;
+}
+
+.marketing__input input {
+  height: 3rem;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 0 0 0 1.5rem;
+}
+
+.marketing__input button {
+  height: calc(3rem - 1px);
+  margin-left: -5px;
+  background-color: #48bac1;
+  border: none;
+  color: #fff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
 /* ==========================================================================
    Media Queries
