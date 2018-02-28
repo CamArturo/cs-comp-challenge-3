@@ -30,3 +30,4 @@ In this project I used scalable svg fonts, CSS grid and Flexbox. There is very l
 ### Iphone6 
 #### 375 x 667
 
+![screenshot-2018-2-28 camilo comp challenge 3 6](https://user-images.githubusercontent.com/8752377/36812201-8e9c758a-1c8d-11e8-98fc-1350a56c0abf.png)
