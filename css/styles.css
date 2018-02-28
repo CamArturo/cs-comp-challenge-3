@@ -80,7 +80,7 @@ body {
   width: 100%;
   height: auto;
   grid-template-columns: 15% 1fr 27%;
-  grid-template-rows: 70px 150px 300px auto;
+  grid-template-rows: 70px 150px 360px auto;
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-areas: "sidebar search search" "sidebar header header" "sidebar reports reports" "sidebar main marketing";
@@ -362,7 +362,30 @@ nav.employee-navigation li a {
       "donut bar"
       "totals applicants"
       "seperator seperator";
+}
 
+.employee-info button {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+  border-radius: 28px;
+  padding: 8px 20px;
+}
+
+.employee-info button:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.employee-info img {
+  margin: 0 auto;
+  display: block;
+}
+
+.employee-info .totals,
+.employee-info .applicants {
+  justify-content: center;
+  align-items: center;
 }
 
 .donut-chart-container {
@@ -379,18 +402,6 @@ nav.employee-navigation li a {
 
 .applicants {
   grid-area: applicants;
-}
-
-/*.section-separator {*/
-  /*grid-area: separator;*/
-/*}*/
-
-.employee-info button {
-  background-color: #fff;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  margin-right: 10px;
-  padding: 0;
 }
 
 .section-separator {
@@ -430,6 +441,16 @@ nav.employee-navigation li a {
   border-bottom-right-radius: 5px;
 }
 
+/*.main th,*/
+/*.main td {*/
+  /*border-bottom: 1px solid #ccc;*/
+/*}*/
+
+/*.main .border-bottom {*/
+  /*width: calc(100% - 2rem);*/
+  /*border-bottom: 1px solid #ccc;;*/
+/*}*/
+
 .main thead th {
   background-color: #6f7d95;
   color: #fff;
@@ -438,18 +459,34 @@ nav.employee-navigation li a {
 .main table th {
   height: 55px;
   text-align: left;
-  padding-left: 2rem;
   text-transform: uppercase;
   font-family: 'Arial', sans-serif;
 }
 
-.main table th:nth-child(1) {
-  border-top-left-radius: 5px;
+.main table tr {
+  height: 90px;
 }
 
+.main table th:nth-child(1) {
+  border-top-left-radius: 5px;
+  width: 2rem;
+}
 .main table th:nth-child(2) {
+  width: calc(25% - 2rem);
+  border-bottom: 1px solid #ccc;
+  margin: 10px;
+}
+
+.main table td {
+  width: calc(75% - 2rem);
+  border-bottom: 1px solid #ccc;
+  padding-left: 2rem;
+  margin: 10px;
+}
+
+.main table th:nth-child(4) {
   border-top-right-radius: 5px;
-  width: 75%;
+  width: 2rem;
 }
 
 .main table th button {
@@ -460,7 +497,7 @@ nav.employee-navigation li a {
 }
 
 .main table td {
-  padding-left: 2rem;
+  padding: 1rem 1rem 1rem 2rem;
 }
 
 /*fb - #4e73c3*/
